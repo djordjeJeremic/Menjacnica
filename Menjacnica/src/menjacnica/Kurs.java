@@ -14,21 +14,29 @@ public class Kurs {
 		return prodajni;
 	}
 	public void setProdajni(double prodajni) {
+		if(prodajni <0)
+			throw new RuntimeException("Ne moze negativan broj");
 		this.prodajni = prodajni;
 	}
 	public double getKupovni() {
 		return kupovni;
 	}
 	public void setKupovni(double kupovni) {
+		if(kupovni <0)
+			throw new RuntimeException("Ne moze negativan broj");
 		this.kupovni = kupovni;
 	}
 	public double getSrednji() {
 		return srednji;
 	}
 	public void setSrednji(double srednji) {
+		if(srednji <0)
+			throw new RuntimeException("Ne moze negativan broj");
 		this.srednji = srednji;
 	}
 	public GregorianCalendar getDatum() {
+		if(datum == null)
+			throw new RuntimeException("Ne moze null");
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {

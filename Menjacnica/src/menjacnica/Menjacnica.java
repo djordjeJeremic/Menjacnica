@@ -10,12 +10,16 @@ public class Menjacnica {
 		return valuta;
 	}
 	public void setValuta(String valuta) {
+		if(valuta == null)
+			throw new RuntimeException("Ne moze null");
 		this.valuta = valuta;
 	}
 	public String getOznaka() {
 		return oznaka;
 	}
 	public void setOznaka(String oznaka) {
+		if(oznaka == null)
+			throw new RuntimeException("Ne moze null");
 		this.oznaka = oznaka;
 	}
 	@Override
